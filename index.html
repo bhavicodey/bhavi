@@ -16,6 +16,7 @@
             background-color: #101522;
             color: white;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         /* Navbar */
@@ -59,17 +60,30 @@
             height: 100vh;
             background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?fit=crop&w=1920&h=1080&q=80') no-repeat center center/cover;
             text-align: center;
+            animation: fadeIn 2s ease-in;
         }
 
         header h1 {
             font-size: 4rem;
             color: #f5f5f5;
+            animation: slideIn 1s ease-in-out;
         }
 
         header h2 {
             font-size: 2rem;
             color: #f0f0f0;
             margin-top: 10px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         /* About Section */
@@ -77,11 +91,13 @@
             padding: 100px 50px;
             text-align: center;
             background-color: #161b25;
+            animation: fadeInUp 1.5s ease;
         }
 
         .about h2 {
             font-size: 3rem;
             margin-bottom: 20px;
+            position: relative;
         }
 
         .about p {
@@ -99,6 +115,17 @@
             height: 200px;
             object-fit: cover;
             border: 5px solid #2874f0;
+            animation: zoomIn 1.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         /* Projects Section */
@@ -111,6 +138,7 @@
             font-size: 3rem;
             text-align: center;
             margin-bottom: 50px;
+            position: relative;
         }
 
         .project-grid {
@@ -125,11 +153,13 @@
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1.5s ease;
         }
 
         .project-item:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         .project-item h3 {
@@ -158,6 +188,7 @@
             padding: 100px 50px;
             background-color: #0d0e12;
             text-align: center;
+            animation: fadeInUp 1.5s ease;
         }
 
         .skills h2 {
@@ -170,6 +201,7 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 30px;
+            animation: fadeInUp 1.5s ease;
         }
 
         .skills-list div {
@@ -179,6 +211,11 @@
             font-size: 1.2rem;
             width: 200px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .skills-list div:hover {
+            transform: scale(1.1);
         }
 
         /* Contact Section */
@@ -186,6 +223,7 @@
             padding: 100px 50px;
             text-align: center;
             background-color: #101522;
+            animation: fadeInUp 1.5s ease;
         }
 
         .contact h2 {
@@ -207,6 +245,7 @@
             border: none;
             color: white;
             font-size: 1rem;
+            border-radius: 4px;
         }
 
         .contact form input[type="submit"] {
@@ -214,12 +253,14 @@
             cursor: pointer;
             border: none;
             transition: background-color 0.3s;
+            border-radius: 4px;
         }
 
         .contact form input[type="submit"]:hover {
             background-color: #1a5ac1;
         }
 
+        /* Footer */
         footer {
             background-color: #0d0e12;
             text-align: center;
@@ -275,18 +316,18 @@
         <h2>My Projects</h2>
         <div class="project-grid">
             <div class="project-item">
-                <h3>AI Rover</h3>
-                <p>An AI-powered rover designed to explore difficult terrains on other planets.</p>
+                <h3>AI Space Rover</h3>
+                <p>A smart rover designed to navigate and explore uncharted terrains autonomously using AI algorithms.</p>
                 <a href="#">View Project</a>
             </div>
             <div class="project-item">
-                <h3>Space Data Analysis</h3>
-                <p>Analyzing data from space missions using machine learning models.</p>
+                <h3>Space Simulation</h3>
+                <p>An interactive simulation that models planetary movements and space exploration missions.</p>
                 <a href="#">View Project</a>
             </div>
             <div class="project-item">
-                <h3>AI-Powered Satellite</h3>
-                <p>A concept for a satellite that uses AI for autonomous space operations.</p>
+                <h3>AI Chatbot</h3>
+                <p>An AI-powered chatbot that helps users understand the latest space tech trends and discoveries.</p>
                 <a href="#">View Project</a>
             </div>
         </div>
@@ -298,20 +339,25 @@
         <div class="skills-list">
             <div>Python</div>
             <div>Machine Learning</div>
-            <div>Space Engineering</div>
+            <div>Artificial Intelligence</div>
+            <div>Space Technology</div>
+            <div>Data Science</div>
             <div>Robotics</div>
-            <div>AI Research</div>
-            <div>Data Analysis</div>
+            <div>C++</div>
+            <div>JavaScript</div>
+            <div>HTML & CSS</div>
+            <div>Neural Networks</div>
+            <div>Astronomy</div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Contact Me</h2>
-        <form>
+        <form action="#">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+            <textarea rows="6" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message">
         </form>
     </section>
