@@ -13,8 +13,8 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #101522;
-            color: white;
+            background-color: #f4f4f9;
+            color: #2c3e50;
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
@@ -22,7 +22,7 @@
         /* Navbar */
         nav {
             width: 100%;
-            background-color: #0d0e12;
+            background-color: #2980b9;
             padding: 20px 0;
             position: sticky;
             top: 0;
@@ -49,7 +49,7 @@
         }
 
         nav ul li a:hover {
-            background-color: #2874f0;
+            background-color: #1e6d93;
         }
 
         /* Header */
@@ -58,20 +58,19 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?fit=crop&w=1920&h=1080&q=80') no-repeat center center/cover;
+            background: linear-gradient(to right, #16a085, #2ecc71);
+            color: white;
             text-align: center;
             animation: fadeIn 2s ease-in;
         }
 
         header h1 {
             font-size: 4rem;
-            color: #f5f5f5;
             animation: slideIn 1s ease-in-out;
         }
 
         header h2 {
             font-size: 2rem;
-            color: #f0f0f0;
             margin-top: 10px;
             animation: slideIn 1.5s ease-in-out;
         }
@@ -90,14 +89,14 @@
         .about {
             padding: 100px 50px;
             text-align: center;
-            background-color: #161b25;
+            background-color: #f7f7f7;
             animation: fadeInUp 1.5s ease;
         }
 
         .about h2 {
             font-size: 3rem;
             margin-bottom: 20px;
-            position: relative;
+            color: #34495e;
         }
 
         .about p {
@@ -114,7 +113,7 @@
             width: 200px;
             height: 200px;
             object-fit: cover;
-            border: 5px solid #2874f0;
+            border: 5px solid #16a085;
             animation: zoomIn 1.5s ease;
         }
 
@@ -131,39 +130,40 @@
         /* Projects Section */
         .projects {
             padding: 100px 50px;
-            background-color: #101522;
+            background-color: #ecf0f1;
         }
 
         .projects h2 {
             font-size: 3rem;
             text-align: center;
             margin-bottom: 50px;
-            position: relative;
+            color: #2c3e50;
         }
 
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
 
         .project-item {
-            background-color: #161b25;
-            padding: 20px;
-            border-radius: 8px;
+            background-color: #3498db;
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
             animation: fadeInUp 1.5s ease;
         }
 
         .project-item:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
         }
 
         .project-item h3 {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             margin-bottom: 15px;
         }
 
@@ -174,61 +174,145 @@
 
         .project-item a {
             text-decoration: none;
-            color: #2874f0;
-            font-weight: bold;
-            transition: color 0.3s;
+            color: white;
+            background-color: #1e6d93;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
 
         .project-item a:hover {
-            color: #f5f5f5;
+            background-color: #145a7b;
         }
 
-        /* Skills Section */
-        .skills {
+        /* Achievements Section */
+        .achievements {
             padding: 100px 50px;
-            background-color: #0d0e12;
+            background-color: #f4f4f9;
             text-align: center;
-            animation: fadeInUp 1.5s ease;
         }
 
-        .skills h2 {
+        .achievements h2 {
             font-size: 3rem;
             margin-bottom: 40px;
+            color: #2c3e50;
         }
 
-        .skills-list {
+        .achievement-list {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 30px;
-            animation: fadeInUp 1.5s ease;
         }
 
-        .skills-list div {
-            background-color: #161b25;
+        .achievement-item {
+            background-color: #ffffff;
             padding: 20px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            width: 200px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            width: 300px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
 
-        .skills-list div:hover {
-            transform: scale(1.1);
+        .achievement-item:hover {
+            transform: scale(1.05);
+        }
+
+        .achievement-item img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .achievement-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2980b9;
+        }
+
+        .achievement-item p {
+            font-size: 1rem;
+        }
+
+        /* Things I'm Working On Section */
+        .working-on {
+            padding: 100px 50px;
+            background-color: #ecf0f1;
+            text-align: center;
+        }
+
+        .working-on h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #34495e;
+        }
+
+        .working-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .working-item {
+            background-color: #16a085;
+            padding: 30px;
+            border-radius: 12px;
+            color: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .working-item:hover {
+            transform: scale(1.05);
+        }
+
+        .working-item h3 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+        }
+
+        .working-item p {
+            font-size: 1rem;
+        }
+
+        /* Photo Booth Section */
+        .photo-booth {
+            padding: 100px 50px;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        .photo-booth h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         /* Contact Section */
         .contact {
             padding: 100px 50px;
             text-align: center;
-            background-color: #101522;
-            animation: fadeInUp 1.5s ease;
+            background-color: #2c3e50;
         }
 
         .contact h2 {
             font-size: 3rem;
             margin-bottom: 40px;
+            color: white;
         }
 
         .contact form {
@@ -236,45 +320,38 @@
             margin: 0 auto;
         }
 
-        .contact form input,
-        .contact form textarea {
+        .contact input, .contact textarea {
             width: 100%;
             padding: 15px;
-            margin-bottom: 20px;
-            background-color: #161b25;
+            margin: 10px 0;
+            border-radius: 8px;
             border: none;
+        }
+
+        .contact input[type="submit"] {
+            background-color: #16a085;
             color: white;
-            font-size: 1rem;
-            border-radius: 4px;
-        }
-
-        .contact form input[type="submit"] {
-            background-color: #2874f0;
-            cursor: pointer;
             border: none;
+            cursor: pointer;
             transition: background-color 0.3s;
-            border-radius: 4px;
         }
 
-        .contact form input[type="submit"]:hover {
-            background-color: #1a5ac1;
+        .contact input[type="submit"]:hover {
+            background-color: #1e847c;
         }
 
         /* Footer */
         footer {
-            background-color: #0d0e12;
-            text-align: center;
-            padding: 20px;
+            background-color: #34495e;
             color: white;
-        }
-
-        footer p {
-            margin: 0;
+            padding: 20px;
+            text-align: center;
         }
 
         footer a {
-            color: #2874f0;
+            color: #ecf0f1;
             text-decoration: none;
+            margin: 0 10px;
         }
 
         footer a:hover {
@@ -289,7 +366,9 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#working-on">Things I'm Working On</a></li>
+            <li><a href="#photo-booth">Photo Booth</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -298,26 +377,24 @@
     <header>
         <div>
             <h1>Space & AI Enthusiast</h1>
-            <h2>Exploring the Future of Space and Artificial Intelligence</h2>
+            <h2>Exploring the Intersection of Technology and the Universe</h2>
         </div>
     </header>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <img src="https://via.placeholder.com/200" alt="Profile Picture">
         <h2>About Me</h2>
-        <p>
-            Hi! I'm a 13-year-old passionate about space technology and artificial intelligence. I love building innovative projects, exploring the unknown, and pushing the boundaries of what is possible. From AI-powered robots to space exploration concepts, my interests span across the vast universe.
-        </p>
+        <p>Hello! I'm a passionate AI enthusiast with a love for space exploration. My work focuses on building AI-powered projects that help explore the unknown, both on Earth and beyond.</p>
+        <img src="your-image.jpg" alt="Profile Picture">
     </section>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
-        <h2>My Projects</h2>
+        <h2>Projects</h2>
         <div class="project-grid">
             <div class="project-item">
                 <h3>AI Space Rover</h3>
-                <p>A smart rover designed to navigate and explore uncharted terrains autonomously using AI algorithms.</p>
+                <p>An AI-powered rover designed to autonomously explore uncharted terrains.</p>
                 <a href="#">View Project</a>
             </div>
             <div class="project-item">
@@ -327,27 +404,57 @@
             </div>
             <div class="project-item">
                 <h3>AI Chatbot</h3>
-                <p>An AI-powered chatbot that helps users understand the latest space tech trends and discoveries.</p>
+                <p>A conversational AI bot that helps users learn about space technologies.</p>
                 <a href="#">View Project</a>
             </div>
+            <!-- Add more project cards here -->
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div>Python</div>
-            <div>Machine Learning</div>
-            <div>Artificial Intelligence</div>
-            <div>Space Technology</div>
-            <div>Data Science</div>
-            <div>Robotics</div>
-            <div>C++</div>
-            <div>JavaScript</div>
-            <div>HTML & CSS</div>
-            <div>Neural Networks</div>
-            <div>Astronomy</div>
+    <!-- Achievements Section -->
+    <section class="achievements" id="achievements">
+        <h2>Achievements</h2>
+        <div class="achievement-list">
+            <div class="achievement-item">
+                <img src="achievement1.jpg" alt="Achievement 1">
+                <h3>NASA AI Challenge Winner</h3>
+                <p>Won the prestigious NASA AI Rover Navigation Challenge in 2023.</p>
+            </div>
+            <div class="achievement-item">
+                <img src="achievement2.jpg" alt="Achievement 2">
+                <h3>Top AI Research Paper</h3>
+                <p>Published a paper on AI in Space Exploration, ranked top 10 in global AI journals.</p>
+            </div>
+            <!-- Add more achievements here -->
+        </div>
+    </section>
+
+    <!-- Things I'm Working On Section -->
+    <section class="working-on" id="working-on">
+        <h2>Things I'm Working On</h2>
+        <div class="working-list">
+            <div class="working-item">
+                <h3>AI-Based Mars Rover</h3>
+                <p>Developing an AI-powered Mars rover prototype for autonomous navigation.</p>
+            </div>
+            <div class="working-item">
+                <h3>Satellite Imaging Analysis</h3>
+                <p>Building models to analyze satellite data for environmental research.</p>
+            </div>
+            <!-- Add more ongoing work here -->
+        </div>
+    </section>
+
+    <!-- Photo Booth Section -->
+    <section class="photo-booth" id="photo-booth">
+        <h2>Photo Booth</h2>
+        <div class="photo-grid">
+            <!-- Add 30 images here -->
+            <img src="photo1.jpg" alt="Photo 1">
+            <img src="photo2.jpg" alt="Photo 2">
+            <img src="photo3.jpg" alt="Photo 3">
+            <img src="photo4.jpg" alt="Photo 4">
+            <!-- Keep adding images until you have 30 photos -->
         </div>
     </section>
 
