@@ -1,86 +1,326 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space & AI Enthusiast Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <!--==================== UNICONS ====================-->
-        
-        
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="">
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #101522;
+            color: white;
+            scroll-behavior: smooth;
+        }
 
-        <title>Responsive Portfolio Website</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            
-        </header>
+        /* Navbar */
+        nav {
+            width: 100%;
+            background-color: #0d0e12;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                
-            </section>
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
 
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                
-            </section>
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
 
-            </section>
+        nav ul li a:hover {
+            background-color: #2874f0;
+        }
 
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
+        /* Header */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?fit=crop&w=1920&h=1080&q=80') no-repeat center center/cover;
+            text-align: center;
+        }
 
-            </section>
+        header h1 {
+            font-size: 4rem;
+            color: #f5f5f5;
+        }
 
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                
-            </section>
+        header h2 {
+            font-size: 2rem;
+            color: #f0f0f0;
+            margin-top: 10px;
+        }
 
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
-                
-            </section>
+        /* About Section */
+        .about {
+            padding: 100px 50px;
+            text-align: center;
+            background-color: #161b25;
+        }
 
-            <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
+        .about h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-            </section>
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
 
-            <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
-                
-            </section>
+        .about img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid #2874f0;
+        }
 
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
+        /* Projects Section */
+        .projects {
+            padding: 100px 50px;
+            background-color: #101522;
+        }
 
-            </section>
-        </main>
+        .projects h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-         
-        </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-        <!--==================== SWIPER JS ====================-->
-        <script src=""></script>
+        .project-item {
+            background-color: #161b25;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
 
-        <!--==================== MAIN JS ====================-->
-        <script src=""></script>
-    </body>
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-item p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .project-item a {
+            text-decoration: none;
+            color: #2874f0;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .project-item a:hover {
+            color: #f5f5f5;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 100px 50px;
+            background-color: #0d0e12;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .skills-list div {
+            background-color: #161b25;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 50px;
+            text-align: center;
+            background-color: #101522;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #161b25;
+            border: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .contact form input[type="submit"] {
+            background-color: #2874f0;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact form input[type="submit"]:hover {
+            background-color: #1a5ac1;
+        }
+
+        footer {
+            background-color: #0d0e12;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #2874f0;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div>
+            <h1>Space & AI Enthusiast</h1>
+            <h2>Exploring the Future of Space and Artificial Intelligence</h2>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <img src="https://via.placeholder.com/200" alt="Profile Picture">
+        <h2>About Me</h2>
+        <p>
+            Hi! I'm a 13-year-old passionate about space technology and artificial intelligence. I love building innovative projects, exploring the unknown, and pushing the boundaries of what is possible. From AI-powered robots to space exploration concepts, my interests span across the vast universe.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <h3>AI Rover</h3>
+                <p>An AI-powered rover designed to explore difficult terrains on other planets.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-item">
+                <h3>Space Data Analysis</h3>
+                <p>Analyzing data from space missions using machine learning models.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-item">
+                <h3>AI-Powered Satellite</h3>
+                <p>A concept for a satellite that uses AI for autonomous space operations.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div>Python</div>
+            <div>Machine Learning</div>
+            <div>Space Engineering</div>
+            <div>Robotics</div>
+            <div>AI Research</div>
+            <div>Data Analysis</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ by a Space & AI Enthusiast</p>
+        <p><a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">Twitter</a></p>
+    </footer>
+
+</body>
 </html>
